@@ -56,10 +56,9 @@ class Student:
 # definition of function assign
 def assign(students, name, pwd, project):
     for student in students:
-        if student.person.full_name() == name:
-            if student.check_password(pwd):
-                if project not in student.get_projects():
-                    student.add_project(project)
+        if student.person.full_name() == name and student.check_password(pwd):
+            if project not in student.get_projects():
+                student.add_project(project)
 
 
 ###################################################
